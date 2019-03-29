@@ -1,3 +1,4 @@
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <string>
@@ -8,11 +9,24 @@ using namespace sf;
 
 // DrawingShape should be an abstract base class 
 // for Circle and Square
-class DrawingShape 
+class DrawingShape
 {
+public:
+	void draw()
+	{
+
+	}
+
 };
 
 // add Circle, Square classes below. These are derived from DrawingShape
+class Circle : public DrawingShape
+{
+private:
+	CircleShape circle;
+public:
+	void draw()
+	{
 
-
-
+	}
+};

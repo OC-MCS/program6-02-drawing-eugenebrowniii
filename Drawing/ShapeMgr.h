@@ -1,3 +1,4 @@
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -11,11 +12,11 @@ using namespace sf;
 class ShapeMgr
 {
 private:
-	
+
 public:
 	ShapeMgr()
 	{
-		
+
 	}
 
 	void addShape(Vector2f pos, ShapeEnum whichShape, Color color)

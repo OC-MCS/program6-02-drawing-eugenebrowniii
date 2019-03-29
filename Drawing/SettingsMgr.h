@@ -1,3 +1,4 @@
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -11,21 +12,35 @@ enum ShapeEnum { CIRCLE, SQUARE };
 class SettingsMgr
 {
 private:
-	
+	Color colorSetting;
+	ShapeEnum shapeSetting;
+
 public:
-	SettingsMgr(Color startingColor, ShapeEnum startingShape )
+	SettingsMgr(Color startingColor, ShapeEnum startingShape)
 	{
+		colorSetting = startingColor;
+		shapeSetting = startingShape;
 	}
 
 	Color getCurColor()
 	{
-		return Color::Blue; // just to make it compile 
+		return colorSetting;
 	}
 
 
 	ShapeEnum getCurShape()
 	{
-		return ShapeEnum::CIRCLE; // just to make it compile;
+		return shapeSetting;
+	}
+
+	void setCurColor(Color color)
+	{
+		colorSetting = color;
+	}
+
+	void setCurShape(ShapeEnum shape)
+	{
+		shapeSetting = shape;
 	}
 
 };

@@ -1,5 +1,8 @@
+
 //================================================
-// YOUR NAME GOES HERE <-----------------  
+// Eugene Brown III
+//Date: 3/28/2019
+//Assignment: Drawing
 //================================================
 #include <iostream>
 #include <fstream>
@@ -24,13 +27,13 @@ int main()
 	window.setFramerateLimit(60);
 
 	SettingsMgr settingsMgr(Color::Blue, ShapeEnum::CIRCLE);
-	SettingsUI  settingsUI(&settingsMgr); 
+	SettingsUI  settingsUI(&settingsMgr);
 	ShapeMgr    shapeMgr;
 	DrawingUI   drawingUI(Vector2f(200, 50));
-	
+
 	// ********* Add code here to make the managers read from shapes file (if the file exists)
 
-	while (window.isOpen()) 
+	while (window.isOpen())
 	{
 		Event event;
 		while (window.pollEvent(event))
@@ -49,7 +52,7 @@ int main()
 			}
 			else if (event.type == Event::MouseMoved && Mouse::isButtonPressed(Mouse::Button::Left))
 			{
-				
+
 				Vector2f mousePos = window.mapPixelToCoords(Mouse::getPosition(window));
 				// check to see if mouse is in the drawing area
 				if (drawingUI.isMouseInCanvas(mousePos))

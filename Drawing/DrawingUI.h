@@ -1,3 +1,4 @@
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -19,11 +20,10 @@ public:
 	void draw(RenderWindow& win, ShapeMgr *mgr)
 	{
 	}
-	
+
 	bool isMouseInCanvas(Vector2f mousePos)
 	{
 		return false; // just to make it compile
 	}
 
 };
-
